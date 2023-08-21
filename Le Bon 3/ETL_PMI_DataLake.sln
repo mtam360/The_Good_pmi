@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ETL_PMI_DataLake", "ETL_PMI_DataLake\ETL_PMI_DataLake.dtproj", "{1C5B51E3-5567-462B-A959-D75D76FA2F40}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C5B51E3-5567-462B-A959-D75D76FA2F40}.Development|Default.ActiveCfg = Development
+		{1C5B51E3-5567-462B-A959-D75D76FA2F40}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52A7986E-1B01-4549-BDDF-45125596BE03}
+	EndGlobalSection
+EndGlobal

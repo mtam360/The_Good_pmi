@@ -1,0 +1,443 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/10/2020 12:57:21 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="PQPAEDTSTD00001"
+  DTS:CreatorName="PMI\a-ctop"
+  DTS:DTSID="{BEE8F42B-AFE8-400E-BA3D-F94CEE73D9B2}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3008.28"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="PackageDownloadFTP_Files"
+  DTS:PackageType="5"
+  DTS:VersionBuild="82"
+  DTS:VersionGUID="{679E5F24-7B97-4DC5-ABDF-BF399FECD2FD}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[cis_cust_engt_sn_20200909.csv]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{EBAEA3E1-CBE0-452C-B1D7-49E29124B81A}"
+      DTS:ObjectName="cis_cust_engt_sn_20200909.csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Ftp\01 - deposit\cis\cust_engt\cis_cust_engt_sn_20200909.csv" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[coverage]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{1D44E721-73F0-4F60-9331-BCE4355A15A3}"
+      DTS:ObjectName="coverage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\Ftp\01 - deposit\talos\coverage" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[cust_engt]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{FB9CFF67-EAA8-45D2-8C0A-823FD0F54265}"
+      DTS:ObjectName="cust_engt">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\Ftp\01 - deposit\cis\cust_engt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FTP CIS Connection Manager]"
+      DTS:CreationName="FTP"
+      DTS:DTSID="{D756B74C-2405-41C6-ACD5-A1E6A94EE926}"
+      DTS:ObjectName="FTP CIS Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="sftp.app.pmi:21">
+          <DTS:FtpConnection
+            DTS:ServerName="sftp.app.pmi"
+            DTS:ServerUserName="s-paedl_cis"
+            DTS:UsePassiveMode="True">
+            <DTS:Property
+              DTS:Name="ServerPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWCL+U8bn1EqKCzDk2Z9FnQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADl3SToNk8cCmt5Wdf0iskgAAAAAASAAACgAAAAEAAAAI3dyOmn4mNrfBqVVDOOMNoIAAAAC8eCR3/K/2sUAAAAt3Dg2vh5ejwZIohxegulyUwCvZY</DTS:Property>
+          </DTS:FtpConnection>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FTP Talos Connection Manager]"
+      DTS:CreationName="FTP"
+      DTS:DTSID="{224F55CB-7CB9-4927-A301-E81342981868}"
+      DTS:ObjectName="FTP Talos Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="sftp.app.pmi:21">
+          <DTS:FtpConnection
+            DTS:ServerName="sftp.app.pmi"
+            DTS:ServerUserName="s-paedl_talos"
+            DTS:UsePassiveMode="True">
+            <DTS:Property
+              DTS:Name="ServerPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWCL+U8bn1EqKCzDk2Z9FnQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAXH0AACojijowBZhln1ReaAAAAAASAAACgAAAAEAAAAFWuxoU7wV83Rhk5NWKxFtAIAAAAc+/r08Aua+EUAAAAdzN62qukA9OBWVmvINTguDqkKYE</DTS:Property>
+          </DTS:FtpConnection>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[retailer_transaction]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{180BC7A0-7403-4312-A6B7-FA9D62895D98}"
+      DTS:ObjectName="retailer_transaction">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\Ftp\01 - deposit\talos\retailer_transaction" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SMTP Connection Manager]"
+      DTS:CreationName="SMTP"
+      DTS:DTSID="{AC44CFC3-B06C-44D0-A9AC-9423096CEEFD}"
+      DTS:ObjectName="SMTP Connection Manager">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=secure.smtp.pmi;UseWindowsAuthentication=True;EnableSsl=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[survey]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{7B43F6A9-1013-4B00-9C92-8E7F4119825F}"
+      DTS:ObjectName="survey">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\Ftp\01 - deposit\cis\survey" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{06779FDB-1D1F-4372-AC73-59BDE21AAC92}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;/Distribution/SFTP_Perm/CIS to PAE Data Lake/drop_off/*contact*&quot;+(DT_STR,4,1252)DATEPART(&quot;yyyy&quot;, GETDATE())+ RIGHT(&quot;0&quot;+(DT_STR,4,1252)DATEPART(&quot;mm&quot;, GETDATE()),2)+ RIGHT(&quot;0&quot;+(DT_STR,4,1252)(DATEPART(&quot;dd&quot;, GETDATE())-1),2) +&quot;*.csv&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="dropOff_cis_contact">
+      <DTS:VariableValue
+        DTS:DataType="8">/Distribution/SFTP_Perm/CIS to PAE Data Lake/drop_off/*contact*20230418*.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1CDF4181-7042-4AD0-82CE-7FC3F40003D8}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;/Distribution/SFTP_Perm/CIS to PAE Data Lake/pick_up/*contact*.csv&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Pickup_cisFiles">
+      <DTS:VariableValue
+        DTS:DataType="8">/Distribution/SFTP_Perm/CIS to PAE Data Lake/pick_up/*contact*.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{AED77F7B-A37B-472D-A64E-C9E62AC0B701}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;/Distribution/SFTP_Perm/CIS to PAE Data Lake/pick_up/*survey*.csv&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Pickup_cis_surveyFiles">
+      <DTS:VariableValue
+        DTS:DataType="8">/Distribution/SFTP_Perm/CIS to PAE Data Lake/pick_up/*survey*.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{92A24D25-3382-49D4-944F-089A2906C102}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;/Distribution/SFTP_Perm/Talos to PAE DataLake/pick_up/*ret_&quot;+&quot;*.csv&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Pickup_talosFiles">
+      <DTS:VariableValue
+        DTS:DataType="8">/Distribution/SFTP_Perm/Talos to PAE DataLake/pick_up/*ret_*.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{443E1345-524B-4368-87A6-D274CC6DDEE0}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;/Distribution/SFTP_Perm/Talos to PAE DataLake/pick_up/*cov_Senegal&quot;+&quot;*.csv&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Pickup_talos_covFiles">
+      <DTS:VariableValue
+        DTS:DataType="8">/Distribution/SFTP_Perm/Talos to PAE DataLake/pick_up/*cov_Senegal*.csv</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Sequence Container CIS"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{BDB45EB0-9CA9-4BD9-B868-19308D66B4AA}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sequence Container CIS">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container CIS\FTP CIS_Contact Task"
+          DTS:CreationName="Microsoft.FtpTask"
+          DTS:Description="FTP Task"
+          DTS:Disabled="True"
+          DTS:DTSID="{76C4155C-BE31-426D-8E61-86F78FB0872B}"
+          DTS:ExecutableType="Microsoft.FtpTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="FTP CIS_Contact Task"
+          DTS:TaskContact="FTP Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="RemotePath">@[User::Pickup_cisFiles]</DTS:PropertyExpression>
+          <DTS:EventHandlers>
+            <DTS:EventHandler
+              DTS:refId="Package\Sequence Container CIS\FTP CIS_Contact Task.EventHandlers[OnError]"
+              DTS:CreationName="OnError"
+              DTS:DTSID="{C7EB1E92-9B86-4A95-82E4-27719106203F}"
+              DTS:EventID="3670066"
+              DTS:EventName="OnError"
+              DTS:LocaleID="-1">
+              <DTS:Variables>
+                <DTS:Variable
+                  DTS:CreationName=""
+                  DTS:Description="The propagate property of the event"
+                  DTS:DTSID="{58CBC978-442D-452F-A203-609C5EE71D84}"
+                  DTS:IncludeInDebugDump="6789"
+                  DTS:Namespace="System"
+                  DTS:ObjectName="Propagate">
+                  <DTS:VariableValue
+                    DTS:DataType="11">-1</DTS:VariableValue>
+                </DTS:Variable>
+              </DTS:Variables>
+              <DTS:Executables />
+            </DTS:EventHandler>
+          </DTS:EventHandlers>
+          <DTS:ObjectData>
+            <FtpData
+              ConnectionName="{D756B74C-2405-41C6-ACD5-A1E6A94EE926}"
+              TaskOperationType="Receive"
+              TaskLocalPath="cust_engt"
+              TaskRemotePath="/Distribution/SFTP_Perm/CIS to PAE Data Lake/pick_up/*contact*.csv"
+              TaskOverwriteDest="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container CIS\FTP CIS_Survey Task"
+          DTS:CreationName="Microsoft.FtpTask"
+          DTS:Description="FTP Task"
+          DTS:Disabled="True"
+          DTS:DTSID="{D9B850C2-62B7-4BAF-89B4-B862B17A8A4A}"
+          DTS:ExecutableType="Microsoft.FtpTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="FTP CIS_Survey Task"
+          DTS:TaskContact="FTP Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="RemotePath">@[User::Pickup_cis_surveyFiles]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <FtpData
+              ConnectionName="{D756B74C-2405-41C6-ACD5-A1E6A94EE926}"
+              TaskOperationType="Receive"
+              TaskLocalPath="survey"
+              TaskRemotePath="/Distribution/SFTP_Perm/CIS to PAE Data Lake/pick_up/*survey*.csv"
+              TaskOverwriteDest="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Sequence Container CIS.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{584A5621-09B1-4772-B132-F5ECB2317E35}"
+          DTS:From="Package\Sequence Container CIS\FTP CIS_Contact Task"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Sequence Container CIS\FTP CIS_Survey Task" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Sequence Container Talos"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{A57218D6-33FF-497F-9F3A-AC0F60760E88}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sequence Container Talos">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container Talos\FTP Talos Cov  Task"
+          DTS:CreationName="Microsoft.FtpTask"
+          DTS:Description="FTP Task"
+          DTS:Disabled="True"
+          DTS:DTSID="{221891A9-6899-4716-83F9-0AA2D0D8BE61}"
+          DTS:ExecutableType="Microsoft.FtpTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="FTP Talos Cov  Task"
+          DTS:TaskContact="FTP Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="RemotePath">@[User::Pickup_talos_covFiles]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <FtpData
+              ConnectionName="{224F55CB-7CB9-4927-A301-E81342981868}"
+              TaskOperationType="Receive"
+              TaskLocalPath="coverage"
+              TaskRemotePath="/Distribution/SFTP_Perm/Talos to PAE DataLake/pick_up/*cov_Senegal*.csv"
+              TaskOverwriteDest="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container Talos\FTP Talos Ret  Task"
+          DTS:CreationName="Microsoft.FtpTask"
+          DTS:Description="FTP Task"
+          DTS:DTSID="{EC0A2527-167F-47E3-BB28-C7B21AEA90D1}"
+          DTS:ExecutableType="Microsoft.FtpTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="FTP Talos Ret  Task"
+          DTS:TaskContact="FTP Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="RemotePath">@[User::Pickup_talosFiles]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <FtpData
+              ConnectionName="{224F55CB-7CB9-4927-A301-E81342981868}"
+              TaskOperationType="Receive"
+              TaskLocalPath="retailer_transaction"
+              TaskRemotePath="/Distribution/SFTP_Perm/Talos to PAE DataLake/pick_up/*ret_*.csv"
+              TaskOverwriteDest="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Sequence Container Talos.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{1CD0427D-F7FC-4EE2-8F51-CA5005A047A4}"
+          DTS:From="Package\Sequence Container Talos\FTP Talos Ret  Task"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Sequence Container Talos\FTP Talos Cov  Task" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="183,42"
+          Id="Package\Sequence Container CIS\FTP CIS_Contact Task"
+          TopLeft="22,17" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Sequence Container CIS\FTP CIS_Survey Task"
+          TopLeft="31,121" />
+        <EdgeLayout
+          Id="Package\Sequence Container CIS.PrecedenceConstraints[Constraint]"
+          TopLeft="117,59">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62"
+              Start="0,0"
+              End="0,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="408,218"
+          Size="408,261"
+          Id="Package\Sequence Container CIS"
+          TopLeft="566,48" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Sequence Container Talos\FTP Talos Cov  Task"
+          TopLeft="61.3333327621222,126.933333209356" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Sequence Container Talos\FTP Talos Ret  Task"
+          TopLeft="78.9999994039536,22.2999998605251" />
+        <EdgeLayout
+          Id="Package\Sequence Container Talos.PrecedenceConstraints[Constraint]"
+          TopLeft="165.66666607062,64.2999998605251">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-17.3333333084981,62.6333333488306"
+              Start="0,0"
+              End="-17.3333333084981,55.1333333488306">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.3166666744153" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.3166666744153"
+                    Point2="0,31.3166666744153"
+                    Point3="-4,31.3166666744153" />
+                  <mssgle:LineSegment
+                    End="-13.3333333084981,31.3166666744153" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.3333333084981,31.3166666744153"
+                    Point2="-17.3333333084981,31.3166666744153"
+                    Point3="-17.3333333084981,35.3166666744153" />
+                  <mssgle:LineSegment
+                    End="-17.3333333084981,55.1333333488306" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="360,309"
+          Size="360,352"
+          Id="Package\Sequence Container Talos"
+          TopLeft="62,46" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
