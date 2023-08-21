@@ -1,0 +1,1950 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/15/2020 10:32:35 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-B7VUSAH"
+  DTS:CreatorName="DESKTOP-B7VUSAH\chaikhou"
+  DTS:DTSID="{8240D500-E2EC-4F10-B884-FFF2CDE59598}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3008.28"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="sf_01_dte_file_to_tmp"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="392"
+  DTS:VersionGUID="{861A5FCC-6305-4790-BC59-D933C443A94F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File SF DTE connection]"
+      DTS:CreationName="FLATFILE"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{F329F4A9-6110-47F0-932A-1A2FF4173239}"
+      DTS:ObjectName="Flat File SF DTE connection">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::TalosFilesPath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Job Definition List Name"
+              DTS:DTSID="{E584EE83-8512-4177-9F5A-AF09D897CCD8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Job Definition List Template  Name"
+              DTS:DTSID="{5EC309CA-6931-4269-AE55-8510B673C89A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Audience  Audience Name"
+              DTS:DTSID="{C40FD918-0100-497E-9AD9-6B9B5C7930FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Job List Name"
+              DTS:DTSID="{6EFB338F-3C5A-4EFD-B9DA-6EC45CF02788}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer  Account Id"
+              DTS:DTSID="{59DF89B7-FD2C-43B6-B2F7-97A6E3D9E190}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="User  Full Name"
+              DTS:DTSID="{1A854EC7-80EF-4002-9E3C-C16E9B7D321E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status"
+              DTS:DTSID="{3E0F7FD8-0242-44B0-ACED-6CBD7BEFB98B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State"
+              DTS:DTSID="{BE43CB9A-8C03-4FE9-A000-649C44064ADB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created Date"
+              DTS:DTSID="{5121D078-5F2C-4731-B08A-4C5F55C52EC6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="End Date"
+              DTS:DTSID="{3A7C9466-AD8D-40DE-B6AB-99633C7B6BF5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Approval or Rejection Date"
+              DTS:DTSID="{82D295D7-6999-4B65-8461-EC3F6AF14895}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File talos connection]"
+      DTS:CreationName="FLATFILE"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{8AC8C4E0-929F-4CF9-BA00-66366E673FB8}"
+      DTS:ObjectName="Flat File talos connection">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::TalosFilesPath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Full Date"
+              DTS:DTSID="{545928C0-9215-4369-A51B-E240B937B418}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="time"
+              DTS:DTSID="{A5FDC7A8-1B35-46B7-91EF-78F1B71BA5CE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year"
+              DTS:DTSID="{172328DF-E1B7-4EEC-AB0E-510594D0B402}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Month"
+              DTS:DTSID="{A75481C3-E826-4C48-A472-A1EC24DC9C2E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Week"
+              DTS:DTSID="{F46FCE41-26ED-4305-8D9A-85391A4AE21F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{8170E69B-40CB-4FA8-B5AC-2DD6613D87EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="salesrep_name"
+              DTS:DTSID="{40323655-7560-4991-B6CC-71689BE16C28}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="salesrep_surname"
+              DTS:DTSID="{9B48D6E8-DEA7-4AB1-A95E-CF13A4C48EF2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="salesrep_username"
+              DTS:DTSID="{EB844C86-FBFB-402B-99E0-06B6575B9FDA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="retailer_segmentation"
+              DTS:DTSID="{02F61F2C-3EF0-48D0-B7F5-BFF535891903}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="retailer_username"
+              DTS:DTSID="{AA4FAABA-0EDC-417B-A316-91BC5AC1E841}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="retailer_telephone"
+              DTS:DTSID="{C2ED9435-46E1-41D8-BD8B-7720AD5636F7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="16"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="retailer_name_of_store"
+              DTS:DTSID="{14CEA61E-8F1F-4CBC-9FD1-8AA9BD3898E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="retailer_outlet_type"
+              DTS:DTSID="{09F1678F-C9C0-4E59-80EF-52DC855656D1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="retailer_route"
+              DTS:DTSID="{121EEE23-9A95-4758-AC02-753B09991B13}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="16"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="retailer_region"
+              DTS:DTSID="{A6758747-7AB8-4C59-A5EF-09C1C2EA9BDE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="13"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="retailer_area"
+              DTS:DTSID="{76F5FA80-0618-43EF-93AD-1908B94CC9A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="retailer_territory"
+              DTS:DTSID="{2AE255A4-FA9F-4020-ABA7-80F058051491}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="150"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="retailer_address"
+              DTS:DTSID="{ED3ECC95-FB1F-409A-9FE9-B1A1314C24C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="product"
+              DTS:DTSID="{B30AB1A6-8440-413F-9856-EB086B73DB38}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="22"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="product_type"
+              DTS:DTSID="{5C9BCF8F-3F07-46C9-A201-597FF6AAC575}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="visibility"
+              DTS:DTSID="{A7FE0462-60C9-4312-9816-E3949C55E46A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Quantity"
+              DTS:DTSID="{00AD3AB5-23C7-4EDC-BBF7-36E1E7D3840B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pposm"
+              DTS:DTSID="{C7AE06B9-98F2-4B28-A072-518C347182C9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="stock"
+              DTS:DTSID="{9EB4A7E6-3764-4778-889C-200810DF256A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="handling"
+              DTS:DTSID="{4F174D2C-EC5C-4EF5-8EDB-A70B42307504}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sales"
+              DTS:DTSID="{B140DB3E-F50C-4A5B-AA11-AC3EDF98EBDB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="visibility_on_posm"
+              DTS:DTSID="{FCC47866-07B1-4C27-BD32-936747B2AA85}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="swap_quantity"
+              DTS:DTSID="{B95D3D82-8F0E-4FED-B9B5-1BEEF2BD030F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="volume_incentive"
+              DTS:DTSID="{C8E5BAB6-3610-4E4A-892E-CA073F6DAAEB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="price_compliance"
+              DTS:DTSID="{F681C98C-1386-414B-ADC4-0C2885BBB2E9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="status"
+              DTS:DTSID="{85B85D4B-5B40-44E2-B004-D2AB7FB5F3AE}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PAESNCIQA01 PMI]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{DE276C89-5BBD-4FB9-991E-7AED41C862E3}"
+      DTS:ObjectName="PAESNCIQA01 PMI">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=sqlqa_paesnciqa01.dbaas.sdi.pmi\QA;Initial Catalog=PAESNCIQA01;Provider=SQLNCLI11.1;Integrated Security=SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SMTP Connection Manager]"
+      DTS:CreationName="SMTP"
+      DTS:DTSID="{9F202241-0B9D-4F72-837A-079C84B0B261}"
+      DTS:ObjectName="SMTP Connection Manager">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=secure.smtp.pmi;UseWindowsAuthentication=True;EnableSsl=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5502DEE8-723F-485D-93D2-5A010FCE8EB2}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ArchiveFiles">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Ftp\02 - archive\salesforce\dte</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B214FCF4-024B-4520-A65B-9E79D7E4237A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7AEDF6C5-D8C1-417B-8161-7931FAE3398E}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="TOKEN( @[User::SFDTEFolder]   , &quot;.&quot;, 1 ) +&quot;-arc-&quot;+(DT_WSTR,30)(DT_DBDATE)(GETDATE())+&quot;.csv&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileNameDest">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Ftp\01 - deposit\salesforce\dte-arc-2023-08-21.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{032296E1-714E-46FA-B124-A9A439FA819C}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::SFDTEFolder] +&quot;\\&quot; + @[User::FileName]+&quot;.csv&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileNameSource">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Ftp\01 - deposit\salesforce\dte\.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EDEC0E11-9BA0-4EBC-8032-FC3C57EC7D7C}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="RejectedFiles">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Ftp\03 - reject</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2EDD203B-4ACB-4333-9621-762747FB2675}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SFDTEFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Ftp\01 - deposit\salesforce\dte</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3051CE0D-6537-4B4B-BBA6-C5F3119242AB}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Start_Date">
+      <DTS:VariableValue
+        DTS:DataType="7">7/27/2020 11:37:00 AM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{DF54E4A8-0925-4CDF-8F21-E8963F59589E}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Start_Date_ProcsFile">
+      <DTS:VariableValue
+        DTS:DataType="7">7/30/2020 10:50:24 AM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{CEBBFD4B-822C-4953-AEB4-924BD6ED7AC0}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TalosFilesPath">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A30CE2CE-268E-4A04-85AC-ED0EEA8A3651}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TalosFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Ftp\01 - deposit\talos\retailer_transaction</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Conteneur de boucles Foreach 2"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Conteneur de boucles Foreach"
+      DTS:DTSID="{540E1258-F1A4-43A2-B561-22BFDEA50BFE}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:MaxErrorCount="0"
+      DTS:ObjectName="Conteneur de boucles Foreach 2">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{B33D0922-A917-485C-9099-CC4271F81995}"
+        DTS:ObjectName="{B33D0922-A917-485C-9099-CC4271F81995}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[User::SFDTEFolder]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Ftp\01 - deposit\salesforce\dte" />
+            <FEFEProperty
+              FileSpec="*.csv" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{0E54CF7F-D5D0-4E19-95E0-A53865FD1056}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow Task v2"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1036"
+                  name="sf_01_digital_order_source_file"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File SF DTE connection]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File SF DTE connection]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Job Definition List Name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[Job Definition List Name]"
+                          length="200"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Job Definition List Name]"
+                          name="Job Definition List Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Job Definition List Template  Name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[Job Definition List Template  Name]"
+                          length="200"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Job Definition List Template  Name]"
+                          name="Job Definition List Template  Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Job List Name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[Job List Name]"
+                          length="100"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Job List Name]"
+                          name="Job List Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Customer  Account Id]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[Customer  Account Id]"
+                          length="100"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Customer  Account Id]"
+                          name="Customer  Account Id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[User  Full Name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[User  Full Name]"
+                          length="100"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[User  Full Name]"
+                          name="User  Full Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Status]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[Status]"
+                          length="100"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Status]"
+                          name="Status"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[State]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[State]"
+                          length="100"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[State]"
+                          name="State"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Created Date]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[Created Date]"
+                          length="100"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Created Date]"
+                          name="Created Date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[End Date]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[End Date]"
+                          length="100"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[End Date]"
+                          name="End Date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Audience  Audience Name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[Audience  Audience Name]"
+                          length="255"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Audience  Audience Name]"
+                          name="Audience  Audience Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Approval or Rejection Date]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[Approval or Rejection Date]"
+                          length="100"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Approval or Rejection Date]"
+                          name="Approval or Rejection Date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[Job Definition List Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="200"
+                          name="Job Definition List Name" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[Job Definition List Template  Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="200"
+                          name="Job Definition List Template  Name" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[Audience  Audience Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="255"
+                          name="Audience  Audience Name" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[Job List Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="Job List Name" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[Customer  Account Id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="Customer  Account Id" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[User  Full Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="User  Full Name" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[Status]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="Status" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[State]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="State" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[Created Date]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="Created Date" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[End Date]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="End Date" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].ExternalColumns[Approval or Rejection Date]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="Approval or Rejection Date" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="65001"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="tal_01_TMP_SF_DTE"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[TMP_SF_DTE]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[PAESNCIQA01 PMI]"
+                      connectionManagerRefId="Package.ConnectionManagers[PAESNCIQA01 PMI]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].Columns[Status]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="Status"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[status]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Status]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].Columns[State]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="State"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[State]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].Columns[Job Definition List Name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="200"
+                          cachedName="Job Definition List Name"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[Job_definition_list_name]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Job Definition List Name]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].Columns[Job Definition List Template  Name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="200"
+                          cachedName="Job Definition List Template  Name"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[job_definition_list_template]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Job Definition List Template  Name]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].Columns[Audience  Audience Name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="255"
+                          cachedName="Audience  Audience Name"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[audience_name]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Audience  Audience Name]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].Columns[Job List Name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="Job List Name"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[job_list_name]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Job List Name]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].Columns[Customer  Account Id]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="Customer  Account Id"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[customer_account_id]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Customer  Account Id]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].Columns[User  Full Name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="User  Full Name"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[user_full_name]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[User  Full Name]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].Columns[Created Date]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="Created Date"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[created_date]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Created Date]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].Columns[End Date]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="End Date"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[end_date]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[End Date]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].Columns[Approval or Rejection Date]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="Approval or Rejection Date"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[approval_rejection_date]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output].Columns[Approval or Rejection Date]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[updated_at]"
+                          dataType="dbTimeStamp"
+                          name="updated_at" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[Job_definition_list_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="200"
+                          name="Job_definition_list_name" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[job_definition_list_template]"
+                          codePage="1252"
+                          dataType="str"
+                          length="200"
+                          name="job_definition_list_template" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[audience_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="255"
+                          name="audience_name" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[job_list_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="job_list_name" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[customer_account_id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="customer_account_id" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[user_full_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="user_full_name" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[status]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="status" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="State" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[created_date]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="created_date" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[end_date]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="end_date" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input].ExternalColumns[approval_rejection_date]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="approval_rejection_date" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2.Paths[Flat File Source Output]"
+                  endId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Conteneur de boucles Foreach 2\sf_01_Archiver DTE"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="Tâche de système de fichiers"
+          DTS:DTSID="{74DA4897-85FF-4BE2-93CD-20BA4D1F0DC8}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="sf_01_Archiver DTE"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::FileNameDest"
+              TaskIsSourceVariable="True"
+              TaskDestinationPath="User::ArchiveFiles"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Conteneur de boucles Foreach 2\sf_01_Digital_order_EST_Start_Date_Process_Files"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tâche d'exécution de requêtes SQL"
+          DTS:DTSID="{BD619B34-391A-40AB-9B4F-7E42715CA1B8}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="sf_01_Digital_order_EST_Start_Date_Process_Files"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{DE276C89-5BBD-4FB9-991E-7AED41C862E3}"
+              SQLTask:SqlStatementSource="Select getdate()"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="0"
+                SQLTask:DtsVariableName="User::Start_Date_ProcsFile" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Conteneur de boucles Foreach 2\tal_01_Reject Files Retailer"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="Tâche de système de fichiers"
+          DTS:Disabled="True"
+          DTS:DTSID="{1416F82B-E3DE-481E-AAAF-D22CC5105F35}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="tal_01_Reject Files Retailer"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="{8AC8C4E0-929F-4CF9-BA00-66366E673FB8}"
+              TaskDestinationPath="User::RejectedFiles"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Conteneur de boucles Foreach 2\tal_01_Rename Files Retailer"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="Tâche de système de fichiers"
+          DTS:DTSID="{9D1E838C-4A55-4787-BAB5-2E626C5BC563}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="tal_01_Rename Files Retailer"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="RenameFile"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="{F329F4A9-6110-47F0-932A-1A2FF4173239}"
+              TaskDestinationPath="User::FileNameDest"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Conteneur de boucles Foreach 2.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{57AC89A6-FE97-4B3D-9E63-EC56B114B1A3}"
+          DTS:From="Package\Conteneur de boucles Foreach 2\sf_01_Digital_order_EST_Start_Date_Process_Files"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\Conteneur de boucles Foreach 2\Data Flow Task v2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Conteneur de boucles Foreach 2.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{F52FB08B-A564-4EE5-886E-CA4598636AF5}"
+          DTS:From="Package\Conteneur de boucles Foreach 2\Data Flow Task v2"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\Conteneur de boucles Foreach 2\tal_01_Rename Files Retailer" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Conteneur de boucles Foreach 2.PrecedenceConstraints[Contrainte 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{4F4B544D-195B-4093-8C86-94477D58F2BE}"
+          DTS:From="Package\Conteneur de boucles Foreach 2\tal_01_Rename Files Retailer"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Contrainte 4"
+          DTS:To="Package\Conteneur de boucles Foreach 2\sf_01_Archiver DTE" />
+      </DTS:PrecedenceConstraints>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{EEFA2F84-4601-46FE-9CBD-59BB658830CE}"
+          DTS:ObjectName="{EEFA2F84-4601-46FE-9CBD-59BB658830CE}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::TalosFilesPath" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Delete F_SF_DTE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{29685D98-202C-4116-9BDD-96E501C9E52A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Delete F_SF_DTE"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DE276C89-5BBD-4FB9-991E-7AED41C862E3}"
+          SQLTask:SqlStatementSource="USE [PAESNCIQA01]&#xA;GO&#xA;&#xA;delete F&#xA;FROM F_SF_DTE F&#xA; inner join [dbo].[view_TMP_DTE] V&#xA;  on F.id_created_date = v.id_created_date&#xA;  and F.id_market = v.id_market&#xA;  and F.country_from_file = v.country_from_file&#xA;  and F.job_definition_list_name = v.job_definition_list_name&#xA;  and F.audience_name = v.audience_name &#xA;  and F.job_definition_list_name = v.job_definition_list_name&#xA;  and F.end_date = v.end_date&#xA;  and F.customer_account_id = v.customer_account_id &#xA;  and F.position_code_sf = v.position_code_sf &#xA;  and F.user_full_name = v.user_full_name" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insert F_SF_DTE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{8800c80b-b071-44de-864f-2cf915b1bd9e}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insert F_SF_DTE"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DE276C89-5BBD-4FB9-991E-7AED41C862E3}"
+          SQLTask:SqlStatementSource="&#xA;INSERT INTO [dbo].[F_SF_DTE]&#xA;           ([id_created_date]&#xA;     ,week_desc&#xA;           ,[id_market]&#xA;     ,[country_from_file]&#xA;          ,[job_definition_list_name]&#xA;           ,[job_definition_list_template]&#xA;     &#xA;           ,[audience_name]&#xA;           ,[job_list_name]&#xA;          ,[created_date]&#xA;           ,[end_date]&#xA;           ,[customer_account_id]&#xA;           ,[position_code_sf]&#xA;           ,[user_full_name]&#xA;           ,[state]&#xA;     ,[type]&#xA;  , [type_origin_for_join]&#xA;           ,[approval_rejection_date]&#xA;           ,[is_approved]&#xA;           ,[is_received]&#xA;           ,[is_rejected] &#xA;     ,payout_dte&#xA;     ,missed_payout_dte&#xA;           ,[updated_at]&#xA; &#xA;    /* */&#xA;     )&#xA;select * from view_tmp_dtE&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATION"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{102DBAC1-2E58-4CDF-88F9-8B07980BDBE7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATION"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DE276C89-5BBD-4FB9-991E-7AED41C862E3}"
+          SQLTask:SqlStatementSource="truncate table dbo.[TMP_SF_DTE]&#xA;select getdate()" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\update missed payout F_SF_DTE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{7bf2e4fd-a766-41c4-b25d-0b5fb2305710}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="update missed payout F_SF_DTE"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DE276C89-5BBD-4FB9-991E-7AED41C862E3}"
+          SQLTask:SqlStatementSource="update &#xA;t1&#xA;Set &#xA;t1.payout_dte = iif( state like '%Approved%' and [approval_rejection_date] is not null,t2.payout,0 )  &#xA;, t1.missed_payout_dte=  iif([is_received] - [is_approved]&gt;0,t2.payout*(-1)*([is_received] - [is_approved]),0)&#xA;from&#xA;[dbo].[F_SF_DTE] t1&#xA;left join PARAM_target_dte t2 on upper(t2.task_type) = upper(t1.[type_origin_for_join]) and upper(t2.country) = upper(t1.country_from_file)&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{74673953-303B-4A9C-9083-3AA2DBBD8341}"
+      DTS:From="Package\TRUNCATION"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Conteneur de boucles Foreach 2" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{EB5C6F79-A45E-483D-B932-9BA8B3B0A6F9}"
+      DTS:From="Package\Conteneur de boucles Foreach 2"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Delete F_SF_DTE" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{3D4D9E99-5A03-4895-B9C6-472005BF543E}"
+      DTS:From="Package\Delete F_SF_DTE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Insert F_SF_DTE" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{D56427AE-F186-4B13-90A0-2588DEFFE80A}"
+      DTS:From="Package\Insert F_SF_DTE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\update missed payout F_SF_DTE" />
+  </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{60A86811-FB94-4D92-A95D-98F6546E15C1}"
+      DTS:EventID="0"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="Propriété de propagation de l'événement"
+          DTS:DTSID="{DEBCD807-7996-42F8-9D3A-0F9C5B1614FF}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Package Error"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tâche d'exécution de requêtes SQL"
+          DTS:Disabled="True"
+          DTS:DTSID="{F5AD9A5A-8168-4360-9CD8-7BF9A18C986B}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Package Error"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{DE276C89-5BBD-4FB9-991E-7AED41C862E3}"
+              SQLTask:SqlStatementSource="INSERT INTO [PackageMonitoring] ([Pk_ID]&#xA;      ,[Machine_Name]&#xA;      ,[Package_Name]&#xA;      ,[Task_Name]&#xA;      ,[Error_Code]&#xA;      ,[Error_Description]&#xA;      ,[Start_DATE]&#xA;      ,[FileSource]&#xA;      ,[Success]&#xA;      ,[End_DATE]) VALUES (?,?,?,?,?,?,?,? ,'Failed',GetDate())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="System::PackageID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::MachineName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="System::PackageName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="System::TaskName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ErrorCode"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="5"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::ErrorDescription"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="User::Start_Date"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="7"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="7"
+                SQLTask:DtsVariableName="User::FileNameSource"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Send Mail Task"
+          DTS:CreationName="Microsoft.SendMailTask"
+          DTS:Description="Send Mail Task"
+          DTS:Disabled="True"
+          DTS:DTSID="{D10A5FA7-E1FE-4968-8162-8A0F2D257B97}"
+          DTS:ExecutableType="Microsoft.SendMailTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Send Mail Task"
+          DTS:TaskContact="Send Mail Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="MessageSource">"Error encurred while executing " + @[System::PackageName]  +" package. \n\n To get more details please refer to the monitoring table (PackageMonitoring) on the database. \n\n Error description : "+  @[System::ErrorDescription] + ". \n "+ SUBSTRING( (DT_WSTR, 50) getdate(),1,19)</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SendMailTask:SendMailTaskData
+              SendMailTask:SMTPServer="{9F202241-0B9D-4F72-837A-079C84B0B261}"
+              SendMailTask:From="ctop@pmintl.net"
+              SendMailTask:To="chaikhou.top@adncorp.com"
+              SendMailTask:Subject="Test send mail"
+              SendMailTask:MessageSource="Error encurred while executing sf_01_dte_file_to_tmp package. &#xA;&#xA; To get more details please refer to the monitoring table (PackageMonitoring) on the database. &#xA;&#xA; Error description : . &#xA; 2023-08-21 11:14:02" xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Conteneur de boucles Foreach 2\Data Flow Task v2"
+          TopLeft="281.5,107.857142857143" />
+        <NodeLayout
+          Size="212,42"
+          Id="Package\Conteneur de boucles Foreach 2\sf_01_Archiver DTE"
+          TopLeft="273.5,311.5" />
+        <NodeLayout
+          Size="319,42"
+          Id="Package\Conteneur de boucles Foreach 2\sf_01_Digital_order_EST_Start_Date_Process_Files"
+          TopLeft="245.5,5.5" />
+        <NodeLayout
+          Size="206,42"
+          Id="Package\Conteneur de boucles Foreach 2\tal_01_Reject Files Retailer"
+          TopLeft="5.50000000000006,209.5" />
+        <NodeLayout
+          Size="215,42"
+          Id="Package\Conteneur de boucles Foreach 2\tal_01_Rename Files Retailer"
+          TopLeft="272,209.5" />
+        <EdgeLayout
+          Id="Package\Conteneur de boucles Foreach 2.PrecedenceConstraints[Constraint 3]"
+          TopLeft="405,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-40.5,60.357142857143"
+              Start="0,0"
+              End="-40.5,52.857142857143">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.1785714285715" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.1785714285715"
+                    Point2="0,30.1785714285715"
+                    Point3="-4,30.1785714285715" />
+                  <mssgle:LineSegment
+                    End="-36.5,30.1785714285715" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-36.5,30.1785714285715"
+                    Point2="-40.5,30.1785714285715"
+                    Point3="-40.5,34.1785714285715" />
+                  <mssgle:LineSegment
+                    End="-40.5,52.857142857143" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Conteneur de boucles Foreach 2.PrecedenceConstraints[Constraint 4]"
+          TopLeft="364.5,149.857142857143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15,59.642857142857"
+              Start="0,0"
+              End="15,52.142857142857">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.8214285714285" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.8214285714285"
+                    Point2="0,29.8214285714285"
+                    Point3="4,29.8214285714285" />
+                  <mssgle:LineSegment
+                    End="11,29.8214285714285" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11,29.8214285714285"
+                    Point2="15,29.8214285714285"
+                    Point3="15,33.8214285714285" />
+                  <mssgle:LineSegment
+                    End="15,52.142857142857" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Conteneur de boucles Foreach 2.PrecedenceConstraints[Contrainte 4]"
+          TopLeft="379.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="779,410"
+          Size="779,453"
+          Id="Package\Conteneur de boucles Foreach 2"
+          TopLeft="4,174.5" />
+        <NodeLayout
+          Size="161,43"
+          Id="Package\Delete F_SF_DTE"
+          TopLeft="208.809524802934,665.574603221095" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Insert F_SF_DTE"
+          TopLeft="302.611106661459,731.55238165492" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\TRUNCATION"
+          TopLeft="155.333333333333,61" />
+        <NodeLayout
+          Size="234,42"
+          Id="Package\update missed payout F_SF_DTE"
+          TopLeft="375.277772185703,814.611101412443" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="227.333333333333,103">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="166.166666666667,71.5"
+              Start="0,0"
+              End="166.166666666667,64">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.75"
+                    Point2="0,35.75"
+                    Point3="4,35.75" />
+                  <mssgle:LineSegment
+                    End="162.166666666667,35.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="162.166666666667,35.75"
+                    Point2="166.166666666667,35.75"
+                    Point3="166.166666666667,39.75" />
+                  <mssgle:LineSegment
+                    End="166.166666666667,64" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="393.5,627.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-104.190475197066,38.074603221095"
+              Start="0,0"
+              End="-104.190475197066,30.574603221095">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.0373016105475" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.0373016105475"
+                    Point2="0,19.0373016105475"
+                    Point3="-4,19.0373016105475" />
+                  <mssgle:LineSegment
+                    End="-100.190475197066,19.0373016105475" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-100.190475197066,19.0373016105475"
+                    Point2="-104.190475197066,19.0373016105475"
+                    Point3="-104.190475197066,23.0373016105475" />
+                  <mssgle:LineSegment
+                    End="-104.190475197066,30.574603221095" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="289.309524802934,708.574603221095">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="92.301581858525,22.9777784338251"
+              Start="0,0"
+              End="92.301581858525,15.4777784338251">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.48888921691253" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.48888921691253"
+                    Point2="0,11.4888892169125"
+                    Point3="4,11.4888892169125" />
+                  <mssgle:LineSegment
+                    End="88.301581858525,11.4888892169125" />
+                  <mssgle:CubicBezierSegment
+                    Point1="88.301581858525,11.4888892169125"
+                    Point2="92.301581858525,11.4888892169125"
+                    Point3="92.301581858525,15.4888892169125" />
+                  <mssgle:LineSegment
+                    End="92.301581858525,15.4777784338251" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="381.611106661459,773.55238165492">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="110.666665524244,41.0587197575229"
+              Start="0,0"
+              End="110.666665524244,33.5587197575229">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5293598787615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5293598787615"
+                    Point2="0,20.5293598787615"
+                    Point3="4,20.5293598787615" />
+                  <mssgle:LineSegment
+                    End="106.666665524244,20.5293598787615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="106.666665524244,20.5293598787615"
+                    Point2="110.666665524244,20.5293598787615"
+                    Point3="110.666665524244,24.5293598787615" />
+                  <mssgle:LineSegment
+                    End="110.666665524244,33.5587197575229" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="144,42"
+          Id="Package.EventHandlers[OnError]\Package Error"
+          TopLeft="281,36" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package.EventHandlers[OnError]\Send Mail Task"
+          TopLeft="281,114" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <TaskHost
+    design-time-name="Package\Conteneur de boucles Foreach 2\Data Flow Task v2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE"
+          TopLeft="523.333333333333,220.666666666667" />
+        <NodeLayout
+          Size="227,43"
+          Id="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\sf_01_digital_order_source_file"
+          TopLeft="128,18" />
+        <EdgeLayout
+          Id="Package\Conteneur de boucles Foreach 2\Data Flow Task v2.Paths[Flat File Source Output]"
+          TopLeft="241.5,61">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="370.333333333333,159.666666666667"
+              Start="0,0"
+              End="370.333333333333,152.166666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,75.8333333333335" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,75.8333333333335"
+                    Point2="0,79.8333333333335"
+                    Point3="4,79.8333333333335" />
+                  <mssgle:LineSegment
+                    End="366.333333333333,79.8333333333335" />
+                  <mssgle:CubicBezierSegment
+                    Point1="366.333333333333,79.8333333333335"
+                    Point2="370.333333333333,79.8333333333335"
+                    Point3="370.333333333333,83.8333333333335" />
+                  <mssgle:LineSegment
+                    End="370.333333333333,152.166666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\tal_01_TMP_SF_DTE">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

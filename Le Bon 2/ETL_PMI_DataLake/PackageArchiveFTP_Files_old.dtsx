@@ -1,0 +1,146 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/10/2020 12:57:21 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="PQPAEDTSTD00001"
+  DTS:CreatorName="PMI\a-ctop"
+  DTS:DTSID="{80042778-024B-4088-B1A0-1B6F6E52876F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3008.28"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="PackageArchiveFTP_Files_old"
+  DTS:PackageType="5"
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{01966D27-3199-4DF2-9E71-DE4A5E86F5EC}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FTP CIS Connection Manager]"
+      DTS:CreationName="FTP"
+      DTS:DTSID="{DEFC5F2D-0DF2-4DF6-A95A-7B1A875D7BB3}"
+      DTS:ObjectName="FTP CIS Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="sftp.app.pmi:21">
+          <DTS:FtpConnection
+            DTS:ServerName="sftp.app.pmi"
+            DTS:ServerUserName="s-paedl_cis"
+            DTS:UsePassiveMode="True">
+            <DTS:Property
+              DTS:Name="ServerPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWCL+U8bn1EqKCzDk2Z9FnQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABYvfcm23YpejTRNpkC3mICAAAAAASAAACgAAAAEAAAAMpKGWhf3j74Nw5JPZV+EfYIAAAACGtEXpcMXJYUAAAA0xUWP2rwn54z3GlyiyESwIhO8ZI</DTS:Property>
+          </DTS:FtpConnection>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FTP Talos Connection Manager]"
+      DTS:CreationName="FTP"
+      DTS:DTSID="{A3EECFB6-A74C-41F1-8DC3-C6E42C0F806E}"
+      DTS:ObjectName="FTP Talos Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="sftp.app.pmi:21">
+          <DTS:FtpConnection
+            DTS:ServerName="sftp.app.pmi"
+            DTS:ServerUserName="s-paedl_talos">
+            <DTS:Property
+              DTS:Name="ServerPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWCL+U8bn1EqKCzDk2Z9FnQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABlkyBU1oLQ23W1bdHVPd6PAAAAAASAAACgAAAAEAAAACZl+0jjpNxxKeIjg48NPKcgAAAA7ZiSpXjb0XgqWzgnXkhi7C/GKzAHbvnzaFvw0kndv7gUAAAAJLxqj942S8EBm/j088LImOs+8n8</DTS:Property>
+          </DTS:FtpConnection>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E7F0616F-FF5C-4EFC-A30E-F043A4D64FE6}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Local_cisFiles">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Ftp\02 - archive\CIS\*.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D632CBD3-5C1A-4D4F-8B36-736DBFB6E53A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Local_talosFiles">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Ftp\02 - archive\Talos\*.csv</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\FTP CIS Task"
+      DTS:CreationName="Microsoft.FtpTask"
+      DTS:Description="FTP Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{B142CA88-AD02-4496-BC49-2C5062A0FBF1}"
+      DTS:ExecutableType="Microsoft.FtpTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FTP CIS Task"
+      DTS:TaskContact="FTP Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FtpData
+          ConnectionName="{DEFC5F2D-0DF2-4DF6-A95A-7B1A875D7BB3}"
+          TaskIsLocalPathVar="True"
+          TaskLocalPath="User::Local_cisFiles"
+          TaskRemotePath="/Distribution/SFTP_Perm/CIS to PAE Data Lake/drop_off"
+          TaskOverwriteDest="True" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\FTP Talos Task"
+      DTS:CreationName="Microsoft.FtpTask"
+      DTS:Description="FTP Task"
+      DTS:DTSID="{4CAC6C56-13F2-4F20-90E5-63C63F74D866}"
+      DTS:ExecutableType="Microsoft.FtpTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FTP Talos Task"
+      DTS:TaskContact="FTP Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FtpData
+          ConnectionName="{A3EECFB6-A74C-41F1-8DC3-C6E42C0F806E}"
+          TaskIsLocalPathVar="True"
+          TaskLocalPath="User::Local_talosFiles"
+          TaskRemotePath="/Distribution/SFTP_Perm/Talos to PAE DataLake/drop_off"
+          TaskOverwriteDest="True" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="142,42"
+          Id="Package\FTP CIS Task"
+          TopLeft="359,113" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\FTP Talos Task"
+          TopLeft="150,104" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

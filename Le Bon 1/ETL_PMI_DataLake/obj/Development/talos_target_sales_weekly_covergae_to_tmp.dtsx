@@ -1,0 +1,2798 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/15/2020 10:32:35 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-B7VUSAH"
+  DTS:CreatorName="DESKTOP-B7VUSAH\chaikhou"
+  DTS:DTSID="{C4712FE2-87E7-4BF3-B06D-681399240A44}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3008.28"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="talos_target_sales_weekly_covergae_to_tmp"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="381"
+  DTS:VersionGUID="{FFC53EC5-4E5C-4E16-B6DE-FC52D5B2C3DE}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File POS DB connection]"
+      DTS:CreationName="FLATFILE"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{66D30C9C-6A52-464C-A099-1B04AE9B70EA}"
+      DTS:ObjectName="Flat File POS DB connection">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::TalosFilesPath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Mobile"
+              DTS:DTSID="{A69A35A3-1D8A-4C82-89A5-B5037BE4B313}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Account seller info"
+              DTS:DTSID="{63894511-C2BE-4197-8C73-7A6B4C3C7825}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="6 Digit ID"
+              DTS:DTSID="{B543AEE2-9D15-4E3C-9DF5-14FD8D66CB1B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SN-POS"
+              DTS:DTSID="{609AB03B-A867-4F6B-8469-B9CE0D606BEE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Username "
+              DTS:DTSID="{CE6C5A02-A421-4253-9616-8DD6F1D98C8C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TE"
+              DTS:DTSID="{D46285A7-A758-422A-8BD9-A9972BBA27F9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TS"
+              DTS:DTSID="{2B644BAE-098A-4860-ADC6-AAFBB1D7A8DF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REGION"
+              DTS:DTSID="{A26DEED1-C49A-4F80-AD5B-78B2A0DD38CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Order date"
+              DTS:DTSID="{79936071-B02D-422D-BDB4-B3FA1702DFA5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COUNTRY"
+              DTS:DTSID="{EC9807E4-899F-47AC-BB28-86B21A710A81}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MOIS "
+              DTS:DTSID="{DD59C739-F94F-44C6-A40C-435DDFD240CF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File SF DTE connection]"
+      DTS:CreationName="FLATFILE"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{67E286D9-D834-4697-9E8E-9306773A659B}"
+      DTS:ObjectName="Flat File SF DTE connection">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::TalosFilesPath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="27"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Job Definition List Name"
+              DTS:DTSID="{0359EDD8-7859-4DAC-A5B0-16E267ABF5A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="26"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Job Definition List Template  Name"
+              DTS:DTSID="{FAC88475-A522-4AAD-8E9D-44C96605E03A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="27"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Audience  Audience Name"
+              DTS:DTSID="{DD12E312-2D16-4397-96E7-6225F57ED60A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="12"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Job List Name"
+              DTS:DTSID="{BB1C7812-1050-4E49-8D0C-A7152CA706FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="12"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer  Account Id"
+              DTS:DTSID="{E9DEC1CF-6BA1-416F-83F4-00A61092FB6D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="24"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="User  Full Name"
+              DTS:DTSID="{BBB4EE47-E905-488E-B7AE-310617C86617}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status"
+              DTS:DTSID="{8FDFA326-B37E-4D1F-ACD1-6376E95F1978}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State"
+              DTS:DTSID="{9885485D-BD69-4BAE-AE9D-2BAD73ACBD15}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created Date"
+              DTS:DTSID="{88D05D66-79E3-4175-B644-6FD635E2F947}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="End Date"
+              DTS:DTSID="{8BAA7684-7C19-46E0-A748-924B06B60307}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Approval or Rejection Date"
+              DTS:DTSID="{6AA5F686-9477-4861-A933-368D13A782DF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat Target sales weekly coverage connection]"
+      DTS:CreationName="FLATFILE"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{61931A33-CC23-4B61-99F3-37794F23B3AC}"
+      DTS:ObjectName="Flat Target sales weekly coverage connection">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::TalosFilesPath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{90D7B3A9-AA00-4433-9077-11CE1C2BB810}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TE"
+              DTS:DTSID="{1278B4F2-D5ED-4D43-87CF-917B19B98CEE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Region"
+              DTS:DTSID="{804B2B62-4992-48E2-9B19-218F254DCF7C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Area"
+              DTS:DTSID="{B0E34F52-34B7-4C3E-BFD1-5AEDD94F49D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TS"
+              DTS:DTSID="{6DDFA69E-DA02-4171-9DA8-A6D1B130DF95}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="year"
+              DTS:DTSID="{971D6EF8-8191-44F0-AB02-2D17FD206CD2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="version"
+              DTS:DTSID="{17A7CE5A-5AAE-41AE-96A4-6727FBB6E2F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="KPI"
+              DTS:DTSID="{CA248EDD-B0F9-48E8-B086-0931952286F6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="01"
+              DTS:DTSID="{A387C5B9-8764-45F2-BE3E-827F246084E7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="02"
+              DTS:DTSID="{1989C95E-DD62-45DB-B438-8645336A1B7D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="03"
+              DTS:DTSID="{2A2FB5EE-0D08-4BBA-BAD5-D55B70EEB3F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="04"
+              DTS:DTSID="{3EE8AB29-2C03-4EA3-958D-A12970220145}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="05"
+              DTS:DTSID="{0A98580B-332C-4755-949D-E2FF8C353FA5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="06"
+              DTS:DTSID="{C5DED843-678C-4E4B-81B2-615C39AFEE93}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="07"
+              DTS:DTSID="{E0F65D91-B5B8-40DD-8076-959F3F7E2675}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="08"
+              DTS:DTSID="{8E7F8890-32C1-458A-A8D8-86ACB5C4666C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="09"
+              DTS:DTSID="{B0D4FF12-8550-4686-8EC9-0B24FED8A52E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="10"
+              DTS:DTSID="{F7920BB6-2664-4633-90C1-DD0A8AA65893}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="11"
+              DTS:DTSID="{319EC4DE-7A79-4936-BDD3-F5E5D29F125F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="12 "
+              DTS:DTSID="{259850AE-8F69-4124-8703-2F2013764121}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PAESNCIQA01 PMI]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{DACDE8EE-4324-48DA-980F-890D7A25ACD0}"
+      DTS:ObjectName="PAESNCIQA01 PMI">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=sqlqa_paesnciqa01.dbaas.sdi.pmi\QA;Initial Catalog=PAESNCIQA01;Provider=SQLNCLI11.1;Integrated Security=SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SMTP Connection Manager]"
+      DTS:CreationName="SMTP"
+      DTS:DTSID="{4C26EB03-742A-49BE-A3D9-9C7A7D843060}"
+      DTS:ObjectName="SMTP Connection Manager">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=secure.smtp.pmi;UseWindowsAuthentication=True;EnableSsl=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7972F6EF-4CF5-469D-AAE9-043C4D1E408B}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ArchiveFiles">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Ftp\02 - archive\external\target_talos\sales_weekly_coverage</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E87BF4E2-BEF5-4A24-8024-AA1EDE133329}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{28C7E1F8-2D1D-4C0E-9BC5-DA041DA23A3A}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="TOKEN( @[User::SFDTEFolder]   , &quot;.&quot;, 1 ) +&quot;-arc-&quot;+(DT_WSTR,30)(DT_DBDATE)(GETDATE())+&quot;.csv&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileNameDest">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Ftp\01 - deposit\external\target_talos\sales_weekly_coverage-arc-2023-08-21.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2578F03F-69D4-4620-9F00-DC477211575E}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::SFDTEFolder] +&quot;\\&quot; + @[User::FileName]+&quot;.csv&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileNameSource">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Ftp\01 - deposit\external\target_talos\sales_weekly_coverage\.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{83162077-268D-4EBD-BDA1-4990702C45A3}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="RejectedFiles">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Ftp\03 - reject</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{DA5D65EC-D8B1-47DF-99FF-2EEF8CEBC34D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SFDTEFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Ftp\01 - deposit\external\target_talos\sales_weekly_coverage</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{72F555BF-7482-4FBF-A504-8C01D81E721F}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Start_Date">
+      <DTS:VariableValue
+        DTS:DataType="7">7/27/2020 11:37:00 AM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8C104CFA-1664-4771-A6A9-F77DF6E80CAB}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Start_Date_ProcsFile">
+      <DTS:VariableValue
+        DTS:DataType="7">7/30/2020 10:50:00 AM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0EAF74BE-631D-40CD-9B8E-36ACAD488538}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TalosFilesPath">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{CF6438F7-089B-4CA5-A40C-317787712F2A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TalosFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Ftp\01 - deposit\external\target_talos\sales_weekly_coverage</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Conteneur de boucles Foreach 2"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Conteneur de boucles Foreach"
+      DTS:DTSID="{DCB85CAA-00B8-437A-B428-458973693A56}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:MaxErrorCount="0"
+      DTS:ObjectName="Conteneur de boucles Foreach 2">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{A3583C11-44D8-47CC-B4A9-FFDB050B33D4}"
+        DTS:ObjectName="{D2C78124-309D-4923-B520-2AC96F4ADCDA}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[User::TalosFolder]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Ftp\01 - deposit\external\target_talos\sales_weekly_coverage" />
+            <FEFEProperty
+              FileSpec="*.csv" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{1C0A477F-00D0-4095-93E8-182E5D9092A1}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow Task v2"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[TE]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="TE"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[TE]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[TS]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="TS"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[TS]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[Country]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Country"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[Country]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[Region]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Region"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[Region]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[Area]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Area"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[Area]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[year]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="year"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[year]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[version]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="version"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[version]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[KPI]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="KPI"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[KPI]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[01]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="01"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[01]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[02]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="02"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[02]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[03]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="03"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[03]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[04]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="04"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[04]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[05]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="05"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[05]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[06]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="06"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[06]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[07]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="07"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[07]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[08]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="08"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[08]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[09]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="09"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[09]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[10]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="10"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[10]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[11]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="11"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[11]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input].Columns[12 ]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="12 "
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[12 ]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TE]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TE]"
+                          name="Copy of TE"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[TE]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TS]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TS]"
+                          name="Copy of TS"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[TS]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]"
+                          name="Copy of Country"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[Country]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Region]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Region]"
+                          name="Copy of Region"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[Region]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Area]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Area]"
+                          name="Copy of Area"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[Area]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of year]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of year]"
+                          name="Copy of year"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[year]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of version]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of version]"
+                          name="Copy of version"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[version]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of KPI]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of KPI]"
+                          name="Copy of KPI"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[KPI]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 01]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 01]"
+                          name="Copy of 01"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[01]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 02]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 02]"
+                          name="Copy of 02"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[02]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 03]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 03]"
+                          name="Copy of 03"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[03]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 04]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 04]"
+                          name="Copy of 04"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[04]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 05]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 05]"
+                          name="Copy of 05"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[05]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 06]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 06]"
+                          name="Copy of 06"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[06]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 07]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 07]"
+                          name="Copy of 07"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[07]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 08]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 08]"
+                          name="Copy of 08"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[08]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 09]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 09]"
+                          name="Copy of 09"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[09]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 10]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 10]"
+                          name="Copy of 10"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[10]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 11]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 11]"
+                          name="Copy of 11"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[11]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 12]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 12]"
+                          name="Copy of 12"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[12 ]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1036"
+                  name="targetsales_weekly_covergae_file"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat Target sales weekly coverage connection]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat Target sales weekly coverage connection]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[TE]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[TE]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[TE]"
+                          name="TE"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[TS]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[TS]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[TS]"
+                          name="TS"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[Country]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[Country]"
+                          name="Country"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[Region]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[Region]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[Region]"
+                          name="Region"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[Area]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[Area]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[Area]"
+                          name="Area"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[year]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[year]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[year]"
+                          name="year"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[version]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[version]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[version]"
+                          name="version"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[KPI]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[KPI]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[KPI]"
+                          name="KPI"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[01]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[01]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[01]"
+                          name="01"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[02]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[02]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[02]"
+                          name="02"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[03]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[03]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[03]"
+                          name="03"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[04]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[04]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[04]"
+                          name="04"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[05]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[05]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[05]"
+                          name="05"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[06]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[06]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[06]"
+                          name="06"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[07]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[07]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[07]"
+                          name="07"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[08]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[08]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[08]"
+                          name="08"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[09]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[09]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[09]"
+                          name="09"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[10]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[10]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[10]"
+                          name="10"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[11]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[11]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[11]"
+                          name="11"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[12 ]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[12 ]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].Columns[12 ]"
+                          name="12 "
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[TE]"
+                          dataType="wstr"
+                          length="50"
+                          name="TE" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[TS]"
+                          dataType="wstr"
+                          length="50"
+                          name="TS" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                          dataType="wstr"
+                          length="50"
+                          name="Country" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[Region]"
+                          dataType="wstr"
+                          length="50"
+                          name="Region" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[Area]"
+                          dataType="wstr"
+                          length="50"
+                          name="Area" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[year]"
+                          dataType="wstr"
+                          length="50"
+                          name="year" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[version]"
+                          dataType="wstr"
+                          length="50"
+                          name="version" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[KPI]"
+                          dataType="wstr"
+                          length="50"
+                          name="KPI" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[01]"
+                          dataType="wstr"
+                          length="50"
+                          name="01" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[02]"
+                          dataType="wstr"
+                          length="50"
+                          name="02" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[03]"
+                          dataType="wstr"
+                          length="50"
+                          name="03" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[04]"
+                          dataType="wstr"
+                          length="50"
+                          name="04" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[05]"
+                          dataType="wstr"
+                          length="50"
+                          name="05" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[06]"
+                          dataType="wstr"
+                          length="50"
+                          name="06" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[07]"
+                          dataType="wstr"
+                          length="50"
+                          name="07" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[08]"
+                          dataType="wstr"
+                          length="50"
+                          name="08" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[09]"
+                          dataType="wstr"
+                          length="50"
+                          name="09" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[10]"
+                          dataType="wstr"
+                          length="50"
+                          name="10" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[11]"
+                          dataType="wstr"
+                          length="50"
+                          name="11" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output].ExternalColumns[12 ]"
+                          dataType="wstr"
+                          length="50"
+                          name="12 " />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="65001"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="TMP_talos_target_sales_weekly_coverage"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[TMP_TALOS_TARGET_SALES_WEEKLY_COVERAGE]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[PAESNCIQA01 PMI]"
+                      connectionManagerRefId="Package.ConnectionManagers[PAESNCIQA01 PMI]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of Country]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of Country"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of year]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of year"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[year]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of year]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of TE]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of TE"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[TE]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TE]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of Region]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of Region"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Region]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of Area]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of Area"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[Area]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Area]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of TS]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of TS"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[TS]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TS]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of version]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of version"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[version]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of version]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of KPI]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of KPI"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[KPI]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of KPI]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of 01]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of 01"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[01]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 01]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of 02]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of 02"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[02]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 02]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of 03]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of 03"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[03]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 03]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of 04]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of 04"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[04]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 04]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of 05]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of 05"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[05]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 05]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of 06]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of 06"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[06]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 06]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of 07]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of 07"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[07]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 07]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of 08]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of 08"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[08]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 08]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of 09]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of 09"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[09]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 09]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of 10]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of 10"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[10]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 10]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of 11]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of 11"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[11]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 11]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].Columns[Copy of 12]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of 12"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[12]"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of 12]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[year]"
+                          dataType="r8"
+                          name="year" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                          dataType="wstr"
+                          length="255"
+                          name="Country" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[Code]"
+                          dataType="wstr"
+                          length="255"
+                          name="Code" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[TE]"
+                          dataType="wstr"
+                          length="255"
+                          name="TE" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                          dataType="wstr"
+                          length="255"
+                          name="Region" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[Area]"
+                          dataType="wstr"
+                          length="255"
+                          name="Area" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[TS]"
+                          dataType="wstr"
+                          length="255"
+                          name="TS" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[version]"
+                          dataType="wstr"
+                          length="255"
+                          name="version" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[KPI]"
+                          dataType="wstr"
+                          length="255"
+                          name="KPI" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[01]"
+                          dataType="wstr"
+                          length="10"
+                          name="01" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[02]"
+                          dataType="wstr"
+                          length="10"
+                          name="02" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[03]"
+                          dataType="wstr"
+                          length="10"
+                          name="03" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[04]"
+                          dataType="wstr"
+                          length="10"
+                          name="04" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[05]"
+                          dataType="wstr"
+                          length="10"
+                          name="05" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[06]"
+                          dataType="wstr"
+                          length="10"
+                          name="06" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[07]"
+                          dataType="wstr"
+                          length="10"
+                          name="07" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[08]"
+                          dataType="wstr"
+                          length="10"
+                          name="08" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[09]"
+                          dataType="wstr"
+                          length="10"
+                          name="09" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[10]"
+                          dataType="wstr"
+                          length="10"
+                          name="10" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[11]"
+                          dataType="wstr"
+                          length="10"
+                          name="11" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input].ExternalColumns[12]"
+                          dataType="wstr"
+                          length="10"
+                          name="12" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2.Paths[Data Conversion Output]"
+                  endId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage.Inputs[OLE DB Destination Input]"
+                  name="Data Conversion Output"
+                  startId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2.Paths[Flat File Source Output]"
+                  endId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Conteneur de boucles Foreach 2\tal_01_Archive Files Retailer"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="Tâche de système de fichiers"
+          DTS:DTSID="{7EFA745E-28AE-4BBF-803B-8664671214BB}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="tal_01_Archive Files Retailer"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::FileNameDest"
+              TaskIsSourceVariable="True"
+              TaskDestinationPath="User::ArchiveFiles"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Conteneur de boucles Foreach 2\tal_01_EST_Start_Date_Process_Files"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tâche d'exécution de requêtes SQL"
+          DTS:DTSID="{271F283B-FDFC-44C3-A9BB-5AF990B910B7}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="tal_01_EST_Start_Date_Process_Files"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{DACDE8EE-4324-48DA-980F-890D7A25ACD0}"
+              SQLTask:SqlStatementSource="Select getdate()"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="0"
+                SQLTask:DtsVariableName="User::Start_Date_ProcsFile" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Conteneur de boucles Foreach 2\tal_01_Reject Files Retailer"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="Tâche de système de fichiers"
+          DTS:Disabled="True"
+          DTS:DTSID="{AA23B79C-3A81-4F66-B2F1-0E79BFA7A99E}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="tal_01_Reject Files Retailer"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="{57E65F5C-C405-4522-A54B-1159253D7512}"
+              TaskDestinationPath="User::RejectedFiles"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Conteneur de boucles Foreach 2\tal_01_Rename Files Retailer"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="Tâche de système de fichiers"
+          DTS:DTSID="{3E64751A-8B8D-42E5-A0E1-A13CE0FAD2D2}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="tal_01_Rename Files Retailer"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="RenameFile"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="{61931A33-CC23-4B61-99F3-37794F23B3AC}"
+              TaskDestinationPath="User::FileNameDest"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Conteneur de boucles Foreach 2.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{F2F90564-14D0-47FD-B326-FE0469D66DD8}"
+          DTS:From="Package\Conteneur de boucles Foreach 2\tal_01_EST_Start_Date_Process_Files"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\Conteneur de boucles Foreach 2\Data Flow Task v2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Conteneur de boucles Foreach 2.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{EAA33CD8-13E4-4D45-AD19-AA367910502F}"
+          DTS:From="Package\Conteneur de boucles Foreach 2\Data Flow Task v2"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\Conteneur de boucles Foreach 2\tal_01_Rename Files Retailer" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Conteneur de boucles Foreach 2.PrecedenceConstraints[Contrainte 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{5A59FE9D-1406-4A62-891C-2559C391616E}"
+          DTS:From="Package\Conteneur de boucles Foreach 2\tal_01_Rename Files Retailer"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Contrainte 4"
+          DTS:To="Package\Conteneur de boucles Foreach 2\tal_01_Archive Files Retailer" />
+      </DTS:PrecedenceConstraints>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{54486685-26FC-4D7D-B487-9533E2A0062A}"
+          DTS:ObjectName="{54486685-26FC-4D7D-B487-9533E2A0062A}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::TalosFilesPath" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{40C240F6-E167-4DC9-94E4-D43F1775025C}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DACDE8EE-4324-48DA-980F-890D7A25ACD0}"
+          SQLTask:SqlStatementSource="&#xA;truncate table [dbo].[Final_TALOS_TARGET_sales_weekly_coverage] &#xA;&#xA;&#xA;-- insert into final table from union of visbility, handling....&#xA; insert into [dbo].[Final_TALOS_TARGET_sales_weekly_coverage] (&#xA; &#x9;[Country],&#xA;&#x9;[TE] ,&#xA;&#x9;[Region],&#xA;&#x9;[Area],&#xA;&#x9;[TS] ,&#xA;&#x9;[year],&#xA;&#x9;month,&#xA;&#x9;week_desc,&#xA;&#x9;date_id ,&#xA;&#x9;[version],&#xA;&#x9;target_sales_weekly_coverage,&#xA;&#x9;updated_at )&#xA;&#x9; &#xA;&#x9;&#xA;-- Visibility&#xA;select distinct  v.country , te, region , area, ts, v.year_ , month_, week_desc, date_pk,   version, target_sales_weekly_coverage, getdate()&#xA;from  &#xA;[dbo].[view_tmp_TARGET_sales_weekly_coverage] v&#xA;inner join ( select substring( cast(id_date as varchar(10)),1,6) as year_month&#xA;,substring(substring( cast(id_date as varchar(10)),5,6),1,2) as month_,&#xA; week_desc, year as year_ from [dbo].[D_DATE] ) &#xA;as d on d.year_ =  v.year_ and d.month_ = v.month_pivot&#xA;&#xA;&#xA;&#xA;--where ts = 'Makan Sidibé  Axes' and month_pivot ='01'&#xA;-- union &#xA; -- handling&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATION"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{CFEAA363-379D-48B1-BE3D-C28F880F22C7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATION"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DACDE8EE-4324-48DA-980F-890D7A25ACD0}"
+          SQLTask:SqlStatementSource="&#xA;truncate table [dbo].[TMP_TALOS_TARGET_VISIBILITY]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{34D78254-91E2-4801-8822-2135E40A2E89}"
+      DTS:From="Package\TRUNCATION"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Conteneur de boucles Foreach 2" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{17A259CA-96A2-4EE5-A11A-D7A1E75CAB6F}"
+      DTS:From="Package\Conteneur de boucles Foreach 2"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Execute SQL Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{51D2CAA4-F0CE-4D74-89D0-8818F215F76C}"
+      DTS:EventID="0"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="Propriété de propagation de l'événement"
+          DTS:DTSID="{90F7A8E0-1776-465B-9F17-969064FCE59E}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Package Error"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tâche d'exécution de requêtes SQL"
+          DTS:Disabled="True"
+          DTS:DTSID="{4A20B8E8-9CBB-436A-BE4F-A87D99E6AEB6}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Package Error"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{DACDE8EE-4324-48DA-980F-890D7A25ACD0}"
+              SQLTask:SqlStatementSource="INSERT INTO [PackageMonitoring] ([Pk_ID]&#xA;      ,[Machine_Name]&#xA;      ,[Package_Name]&#xA;      ,[Task_Name]&#xA;      ,[Error_Code]&#xA;      ,[Error_Description]&#xA;      ,[Start_DATE]&#xA;      ,[FileSource]&#xA;      ,[Success]&#xA;      ,[End_DATE]) VALUES (?,?,?,?,?,?,?,? ,'Failed',GetDate())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="System::PackageID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::MachineName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="System::PackageName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="System::TaskName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ErrorCode"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="5"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::ErrorDescription"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="User::Start_Date"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="7"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="7"
+                SQLTask:DtsVariableName="User::FileNameSource"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Send Mail Task"
+          DTS:CreationName="Microsoft.SendMailTask"
+          DTS:Description="Send Mail Task"
+          DTS:DTSID="{D31221A7-FCCD-41D0-A696-5C40EC00667D}"
+          DTS:ExecutableType="Microsoft.SendMailTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Send Mail Task"
+          DTS:TaskContact="Send Mail Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="MessageSource">"Error encurred while executing " + @[System::PackageName]  +" package. \n\n To get more details please refer to the monitoring table (PackageMonitoring) on the database. \n\n Error description : "+  @[System::ErrorDescription] + ". \n "+ SUBSTRING( (DT_WSTR, 50) getdate(),1,19)</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SendMailTask:SendMailTaskData
+              SendMailTask:SMTPServer="{4C26EB03-742A-49BE-A3D9-9C7A7D843060}"
+              SendMailTask:From="adminetl@pmi.ntl"
+              SendMailTask:To="chaikhou.top@adncorp.com"
+              SendMailTask:Subject="Test send mail"
+              SendMailTask:MessageSource="Error encurred while executing talos_target_sales_weekly_covergae_to_tmp package. &#xA;&#xA; To get more details please refer to the monitoring table (PackageMonitoring) on the database. &#xA;&#xA; Error description : . &#xA; 2023-08-21 11:14:10" xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Conteneur de boucles Foreach 2\Data Flow Task v2"
+          TopLeft="424,107.857142857143" />
+        <NodeLayout
+          Size="212,42"
+          Id="Package\Conteneur de boucles Foreach 2\tal_01_Archive Files Retailer"
+          TopLeft="178.142859042755,381.138095129615" />
+        <NodeLayout
+          Size="256,42"
+          Id="Package\Conteneur de boucles Foreach 2\tal_01_EST_Start_Date_Process_Files"
+          TopLeft="245.5,5.5" />
+        <NodeLayout
+          Size="206,42"
+          Id="Package\Conteneur de boucles Foreach 2\tal_01_Reject Files Retailer"
+          TopLeft="5.50000000000006,209.5" />
+        <NodeLayout
+          Size="215,42"
+          Id="Package\Conteneur de boucles Foreach 2\tal_01_Rename Files Retailer"
+          TopLeft="272,209.5" />
+        <EdgeLayout
+          Id="Package\Conteneur de boucles Foreach 2.PrecedenceConstraints[Constraint 3]"
+          TopLeft="435.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="71.5,60.357142857143"
+              Start="0,0"
+              End="71.5,52.857142857143">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5338733431517" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5338733431517"
+                    Point2="0,20.5338733431517"
+                    Point3="4,20.5338733431517" />
+                  <mssgle:LineSegment
+                    End="67.5,20.5338733431517" />
+                  <mssgle:CubicBezierSegment
+                    Point1="67.5,20.5338733431517"
+                    Point2="71.5,20.5338733431517"
+                    Point3="71.5,24.5338733431517" />
+                  <mssgle:LineSegment
+                    End="71.5,52.857142857143" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Conteneur de boucles Foreach 2.PrecedenceConstraints[Constraint 4]"
+          TopLeft="507,149.857142857143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-75.75,59.642857142857"
+              Start="0,0"
+              End="-75.75,52.142857142857">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.2747757602274" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.2747757602274"
+                    Point2="0,39.2747757602274"
+                    Point3="-4,39.2747757602274" />
+                  <mssgle:LineSegment
+                    End="-71.75,39.2747757602274" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-71.75,39.2747757602274"
+                    Point2="-75.75,39.2747757602274"
+                    Point3="-75.75,43.2747757602274" />
+                  <mssgle:LineSegment
+                    End="-75.75,52.142857142857" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Conteneur de boucles Foreach 2.PrecedenceConstraints[Contrainte 4]"
+          TopLeft="379.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-95.3571409572448,129.638095129614"
+              Start="0,0"
+              End="-95.3571409572448,122.138095129614">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.8190475648072" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,60.8190475648072"
+                    Point2="0,64.8190475648072"
+                    Point3="-4,64.8190475648072" />
+                  <mssgle:LineSegment
+                    End="-91.3571409572448,64.8190475648072" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-91.3571409572448,64.8190475648072"
+                    Point2="-95.3571409572448,64.8190475648072"
+                    Point3="-95.3571409572448,68.8190475648072" />
+                  <mssgle:LineSegment
+                    End="-95.3571409572448,122.138095129614" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="635,531"
+          Size="635,574"
+          Id="Package\Conteneur de boucles Foreach 2"
+          TopLeft="403.333333333333,210" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="268.333333333333,823.333333333333" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\TRUNCATION"
+          TopLeft="157.857142857143,113.571428571429" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="229.857142857143,155.571428571429">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="490.97619047619,54.4285714285713"
+              Start="0,0"
+              End="490.97619047619,46.9285714285713">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.2142857142857" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.2142857142857"
+                    Point2="0,27.2142857142857"
+                    Point3="4,27.2142857142857" />
+                  <mssgle:LineSegment
+                    End="486.97619047619,27.2142857142857" />
+                  <mssgle:CubicBezierSegment
+                    Point1="486.97619047619,27.2142857142857"
+                    Point2="490.97619047619,27.2142857142857"
+                    Point3="490.97619047619,31.2142857142857" />
+                  <mssgle:LineSegment
+                    End="490.97619047619,46.9285714285713" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="720.833333333333,784">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-371,39.3333333333334"
+              Start="0,0"
+              End="-371,31.8333333333334">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.6666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.6666666666667"
+                    Point2="0,19.6666666666667"
+                    Point3="-4,19.6666666666667" />
+                  <mssgle:LineSegment
+                    End="-367,19.6666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-367,19.6666666666667"
+                    Point2="-371,19.6666666666667"
+                    Point3="-371,23.6666666666667" />
+                  <mssgle:LineSegment
+                    End="-371,31.8333333333334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="144,42"
+          Id="Package.EventHandlers[OnError]\Package Error"
+          TopLeft="281,36" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package.EventHandlers[OnError]\Send Mail Task"
+          TopLeft="281,114" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <TaskHost
+    design-time-name="Package\Conteneur de boucles Foreach 2\Data Flow Task v2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="277,42"
+          Id="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage"
+          TopLeft="301.333333333333,196.666666666667" />
+        <NodeLayout
+          Size="236,42"
+          Id="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\targetsales_weekly_covergae_file"
+          TopLeft="128,18" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\Data Conversion"
+          TopLeft="483,95" />
+        <EdgeLayout
+          Id="Package\Conteneur de boucles Foreach 2\Data Flow Task v2.Paths[Flat File Source Output]"
+          TopLeft="246,60">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="315,35"
+              Start="0,0"
+              End="315,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="4,17.5" />
+                  <mssgle:LineSegment
+                    End="311,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="311,17.5"
+                    Point2="315,17.5"
+                    Point3="315,21.5" />
+                  <mssgle:LineSegment
+                    End="315,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Conteneur de boucles Foreach 2\Data Flow Task v2.Paths[Data Conversion Output]"
+          TopLeft="561,137">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-121.166666666667,59.666666666667"
+              Start="0,0"
+              End="-121.166666666667,52.166666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.8333333333335" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.8333333333335"
+                    Point2="0,29.8333333333335"
+                    Point3="-4,29.8333333333335" />
+                  <mssgle:LineSegment
+                    End="-117.166666666667,29.8333333333335" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-117.166666666667,29.8333333333335"
+                    Point2="-121.166666666667,29.8333333333335"
+                    Point3="-121.166666666667,33.8333333333335" />
+                  <mssgle:LineSegment
+                    End="-121.166666666667,52.166666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Conteneur de boucles Foreach 2\Data Flow Task v2\TMP_talos_target_sales_weekly_coverage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
